@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=4 uid="uid://bemgaa7aqj6pf"]
+
+[ext_resource type="Script" uid="uid://cubrpdxl60g4f" path="res://Scripts/Main.cs" id="1_r150o"]
+[ext_resource type="Script" uid="uid://dunwc5inejxjx" path="res://Scripts/Game/GameController.cs" id="2_idj7w"]
+[ext_resource type="Script" uid="uid://cfacogt0543rj" path="res://Scripts/Game/MapController.cs" id="3_kln2b"]
+[ext_resource type="TileSet" uid="uid://gi4ubumxrc4d" path="res://Assets/Art/Working/TestTileset.tres" id="4_rgh2o"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_r150o")
+
+[node name="CropToggleButton" type="Button" parent="."]
+offset_left = -1.0
+offset_top = 135.0
+offset_right = 99.0
+offset_bottom = 166.0
+text = "Toggle Crop"
+
+[node name="UpgradeHarvestButton" type="Button" parent="."]
+offset_top = 69.0
+offset_right = 264.0
+offset_bottom = 100.0
+text = "Upgrade Harvest (+5) Cost: 50"
+
+[node name="PlantAllButton" type="Button" parent="."]
+offset_left = -1.0
+offset_top = 170.0
+offset_right = 133.0
+offset_bottom = 201.0
+text = "Plant All"
+
+[node name="HarvestAllButton" type="Button" parent="."]
+offset_left = 142.0
+offset_top = 170.0
+offset_right = 276.0
+offset_bottom = 201.0
+text = "Harvest Ready"
+
+[node name="UpgradeSpeedButton" type="Button" parent="."]
+offset_top = 102.0
+offset_right = 264.0
+offset_bottom = 133.0
+text = "Upgrade Speed (-2) Cost: 50"
+
+[node name="StatusLabel" type="Label" parent="."]
+offset_left = 66.0
+offset_top = 2.0
+offset_right = 139.0
+offset_bottom = 25.0
+text = "Idle Farm"
+
+[node name="CurrencyLabel" type="Label" parent="."]
+offset_left = 65.0
+offset_top = 29.0
+offset_right = 138.0
+offset_bottom = 52.0
+text = "0"
+horizontal_alignment = 2
+
+[node name="MessageLabel" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 20.0
+offset_right = 353.0
+offset_bottom = 43.0
+
+[node name="Map" type="Node2D" parent="."]
+script = ExtResource("3_kln2b")
+
+[node name="SoilLayer" type="TileMapLayer" parent="Map"]
+tile_map_data = PackedByteArray("AAAAAAAAAQAGAAAAAAABAAAAAQAGAAAAAAACAAAAAQAGAAAAAAAAAAEAAQAGAAAAAAAAAAIAAQAGAAAAAAABAAIAAQAGAAAAAAABAAEAAQAGAAAAAAACAAEAAQAGAAAAAAACAAIAAQAGAAAAAAA=")
+tile_set = ExtResource("4_rgh2o")
+
+[node name="CropLayer" type="TileMapLayer" parent="Map"]
+position = Vector2(1, 0)
+tile_set = ExtResource("4_rgh2o")
+
+[node name="HighlightLayer" type="TileMapLayer" parent="Map"]
+position = Vector2(1, 0)
+tile_set = ExtResource("4_rgh2o")
+
+[node name="GameController" type="Node" parent="."]
+script = ExtResource("2_idj7w")

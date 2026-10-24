@@ -1,0 +1,46 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://gi4ubumxrc4d"]
+
+[ext_resource type="Texture2D" uid="uid://dc1k8aq04ofjp" path="res://Assets/Art/Working/basic.png" id="1_t5m2v"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5lpv6"]
+texture = ExtResource("1_t5m2v")
+separation = Vector2i(1, 1)
+20:8/0 = 0
+21:8/0 = 0
+22:8/0 = 0
+23:8/0 = 0
+24:8/0 = 0
+25:9/0 = 0
+26:9/0 = 0
+27:9/0 = 0
+28:10/0 = 0
+29:10/0 = 0
+30:11/0 = 0
+31:11/0 = 0
+32:11/0 = 0
+33:11/0 = 0
+34:12/0 = 0
+35:12/0 = 0
+35:13/0 = 0
+11:10/0 = 0
+18:8/0 = 0
+16:9/0 = 0
+22:14/0 = 0
+6:0/0 = 0
+33:12/0 = 0
+8:10/0 = 0
+6:1/0 = 0
+5:0/0 = 0
+44:23/0 = 0
+44:24/0 = 0
+43:24/0 = 0
+4:0/0 = 0
+41:11/0 = 0
+42:11/0 = 0
+43:11/0 = 0
+41:23/0 = 0
+41:24/0 = 0
+42:24/0 = 0
+
+[resource]
+sources/1 = SubResource("TileSetAtlasSource_5lpv6")
